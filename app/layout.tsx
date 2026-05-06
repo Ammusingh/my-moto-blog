@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Preloader from "./components/Preloader";
+import { Anton, Inter, JetBrains_Mono } from "next/font/google";
+const anton = Anton({ subsets: ["latin"], weight: "400", variable: "--font-display" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
+const mono  = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +32,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Preloader />
+        {children}
+      </body>
     </html>
   );
 }
