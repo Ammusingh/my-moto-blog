@@ -1,11 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Activity, Zap, Settings, ArrowRight, Gauge, Layers } from "lucide-react";
+import { Layers } from "lucide-react";
 import Navbar from "../components/Navbar";
-import GaragePage from "../components/GaragePage";
-import CrewPage from "../components/CrewPage";
-import GearPage from "../components/GearPage";
 
 const builds = [
   {

@@ -1,16 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Instagram, Youtube, Send, Globe, Zap } from "lucide-react";
+import { Mail, MapPin, Send, Globe, Zap } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function ContactPage() {
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
-    };
-
     return (
         <main className="bg-[#050505] min-h-screen text-white overflow-hidden selection:bg-brand-orange selection:text-black">
             <Navbar />

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Instagram, Youtube, Twitter, ArrowUp, Zap } from "lucide-react";
+import { ArrowUp, Zap } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
