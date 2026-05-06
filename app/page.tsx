@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 import Navbar from "./components/Navbar";
 import BlogCard from "./components/BlogCard";
 import TestimonialSlider from "./components/TestimonialSlider";
@@ -114,39 +115,39 @@ export default function Home() {
       </div>
 
       {/* ---------- FEATURED STORY (split editorial) ---------- */}
-      <section className="relative py-40 px-6 md:px-20 max-w-screen-2xl mx-auto overflow-hidden">
-        {/* Background Decorative Element */}
-        <div className="absolute top-1/2 left-0 w-64 h-64 bg-crimson-red/10 blur-[120px] -translate-y-1/2 pointer-events-none" />
+      <section className="relative py-40 px-6 md:px-20 max-w-screen-2xl mx-auto overflow-hidden bg-brand-black">
+        {/* Background Decorative Element - Updated to Brand Orange */}
+        <div className="absolute top-1/2 left-0 w-64 h-64 bg-brand-orange/10 blur-[120px] -translate-y-1/2 pointer-events-none" />
 
         <div className="grid md:grid-cols-12 gap-16 items-center">
 
           {/* --- IMAGE VIEW (THE FIX) --- */}
           <div className="md:col-span-7 relative group">
             {/* Ornamental Tech Border */}
-            <div className="absolute -inset-4 border border-white/5 rounded-2xl pointer-events-none group-hover:border-crimson-red/20 transition-colors duration-700" />
+            <div className="absolute -inset-4 border border-white/5 rounded-2xl pointer-events-none group-hover:border-brand-orange/20 transition-colors duration-700" />
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="relative h-[600px] w-full overflow-hidden rounded-2xl shadow-2xl"
+              className="relative h-[600px] w-full overflow-hidden rounded-2xl shadow-2xl bg-brand-surface"
             >
               {/* Image HUD Overlays */}
               <div className="absolute inset-0 z-20 p-8 flex flex-col justify-between pointer-events-none">
                 <div className="flex justify-between items-start">
                   <div className="flex gap-2">
-                    <span className="h-2 w-2 rounded-full bg-crimson-red animate-pulse" />
+                    <span className="h-2 w-2 rounded-full bg-brand-orange animate-pulse" />
                     <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 italic">System.Active // Feed_01</span>
                   </div>
-                  <Share2 className="text-white/20 group-hover:text-crimson-red transition-colors pointer-events-auto cursor-pointer" size={18} />
+                  <Share2 className="text-white/20 group-hover:text-brand-orange transition-colors pointer-events-auto cursor-pointer" size={18} />
                 </div>
 
                 <div className="bg-black/40 backdrop-blur-md border border-white/10 p-4 inline-flex items-center gap-6 self-start rounded-xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                   <div className="flex items-center gap-2">
-                    <Timer size={14} className="text-crimson-red" />
-                    <span className="text-[10px] font-black uppercase tracking-widest italic">12 Min Read</span>
+                    <Timer size={14} className="text-brand-orange" />
+                    <span className="text-[10px] font-black uppercase tracking-widest italic text-white">12 Min Read</span>
                   </div>
                   <div className="h-4 w-[1px] bg-white/20" />
-                  <span className="text-[10px] font-black uppercase tracking-widest italic text-crimson-red">Adventure</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest italic text-brand-orange">Adventure</span>
                 </div>
               </div>
 
@@ -157,12 +158,12 @@ export default function Home() {
                 alt="Featured"
               />
 
-              {/* Red Vignette on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-crimson-red/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              {/* Orange Vignette on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-orange/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </motion.div>
 
-            {/* Floating Category Badge */}
-            <div className="absolute -bottom-6 -right-6 h-32 w-32 bg-crimson-red rounded-full flex items-center justify-center -rotate-12 border-8 border-[#050505] z-30 group-hover:rotate-0 transition-transform duration-500">
+            {/* Floating Category Badge - Updated to Brand Orange */}
+            <div className="absolute -bottom-6 -right-6 h-32 w-32 bg-brand-orange rounded-full flex items-center justify-center -rotate-12 border-8 border-brand-black z-30 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
               <span className="text-black font-black italic text-center leading-none uppercase text-sm">
                 Top <br /> Pick
               </span>
@@ -175,15 +176,15 @@ export default function Home() {
               <motion.p
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                className="font-mono text-[10px] uppercase tracking-[0.6em] text-crimson-red font-black"
+                className="font-mono text-[10px] uppercase tracking-[0.6em] text-brand-orange font-black"
               >
               // Cover Story
               </motion.p>
 
-              <h2 className="text-6xl md:text-8xl font-black italic uppercase leading-[0.85] tracking-tighter">
+              <h2 className="text-6xl md:text-8xl font-black italic uppercase leading-[0.85] tracking-tighter text-white">
                 Crossing <br />
                 The <span className="text-transparent" style={{ WebkitTextStroke: '1.5px white' }}>High</span> <br />
-                <span className="bg-gradient-to-r from-crimson-red to-deep-ruby bg-clip-text text-transparent italic underline decoration-crimson-red/20 underline-offset-8">
+                <span className="bg-gradient-to-r from-brand-orange to-[#ff8c00] bg-clip-text text-transparent italic underline decoration-brand-orange/20 underline-offset-8">
                   Himalayan
                 </span> <br />
                 Passes
@@ -200,12 +201,12 @@ export default function Home() {
               className="pt-4"
             >
               <a className="group relative inline-flex items-center gap-6 cursor-pointer">
-                <span className="text-sm font-black uppercase italic tracking-[0.2em] group-hover:text-crimson-red transition-colors">
+                <span className="text-sm font-black uppercase italic tracking-[0.2em] text-white group-hover:text-brand-orange transition-colors">
                   Dive into the story
                 </span>
                 <div className="relative flex items-center justify-center">
-                  <div className="h-[2px] w-12 bg-white group-hover:w-24 group-hover:bg-crimson-red transition-all duration-500" />
-                  <ArrowRight size={18} className="absolute -right-8 opacity-0 group-hover:opacity-100 group-hover:right-[-40px] transition-all text-crimson-red" />
+                  <div className="h-[2px] w-12 bg-white group-hover:w-24 group-hover:bg-brand-orange transition-all duration-500" />
+                  <ArrowRight size={18} className="absolute -right-8 opacity-0 group-hover:opacity-100 group-hover:right-[-40px] transition-all text-brand-orange" />
                 </div>
               </a>
             </motion.div>
@@ -238,124 +239,105 @@ export default function Home() {
       </section>
 
       {/* ---------- BENTO GRID ---------- */}
-      <section className="py-24 px-6 md:px-20 max-w-screen-2xl mx-auto">
+      <section className="py-24 px-6 md:px-20 max-w-screen-2xl mx-auto bg-brand-black">
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-[750px]">
 
-          {/* --- CARD 1: THE MAIN EXPEDITION (Tall) --- */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -5 }}
-            className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-[2.5rem] border border-white/5"
-          >
-            {/* Top HUD Detail */}
-            <div className="absolute top-8 left-8 z-20 flex items-center gap-3">
-              <div className="h-1.5 w-1.5 rounded-full bg-crimson-red animate-pulse" />
-              <span className="font-mono text-[10px] tracking-[0.4em] text-white/60 uppercase italic">Active_Log // 2026</span>
-            </div>
-
-            <img
-              src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?q=80&w=1200"
-              className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-[1.5s]"
-              alt="Ladakh"
-            />
-
-            {/* Shadow Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
-
-            <div className="absolute bottom-0 p-10 z-20 w-full">
-              <h3 className="text-5xl md:text-6xl font-black italic uppercase leading-[0.85] tracking-tighter mb-4">
-                Into the <br /> <span className="text-crimson-red">Unknown</span>
-              </h3>
-              <div className="flex items-center gap-4 text-zinc-400 group-hover:text-white transition-colors">
-                <span className="text-xs font-bold uppercase tracking-widest italic">Ladakh Expedition</span>
-                <div className="h-px w-8 bg-crimson-red/50" />
-                <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* --- CARD 2: THE GARAGE (Small Tech) --- */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ borderColor: 'rgba(225, 29, 72, 0.3)' }}
-            className="bg-zinc-900/30 backdrop-blur-xl p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between group relative overflow-hidden"
-          >
-            {/* Subtle Background Pattern */}
-            <Gauge className="absolute -right-4 -top-4 text-white/[0.02] rotate-12" size={180} />
-
-            <div className="h-14 w-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-crimson-red transition-all duration-500">
-              <Gauge className="text-white group-hover:text-black transition-colors" size={24} />
-            </div>
-
-            <div>
-              <h4 className="text-2xl font-black uppercase italic leading-none">The Garage</h4>
-              <p className="text-zinc-500 text-xs mt-3 font-medium uppercase tracking-widest italic">Specs & Performance</p>
-            </div>
-          </motion.div>
-
-          {/* --- CARD 3: JOIN THE CREW (The CTA) --- */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-crimson-red p-8 rounded-[2rem] text-black h-full flex flex-col justify-between group cursor-pointer shadow-[0_20px_50px_rgba(225,29,72,0.2)]"
-          >
-            <div className="flex justify-between items-start">
-              <Users size={32} strokeWidth={2.5} />
-              <div className="h-2 w-2 rounded-full bg-black/20" />
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="text-3xl font-black uppercase italic leading-none tracking-tighter">Join The <br /> Crew</h4>
-              <div className="flex items-center gap-2 overflow-hidden">
-                <motion.div
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  <ArrowUpRight size={20} />
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* --- CARD 4: GEAR GUIDE (Wide Wide) --- */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="md:col-span-2 bg-zinc-900/30 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/5 relative overflow-hidden group flex items-center"
-          >
-            {/* Giant Outline Background Text */}
-            <span
-              className="absolute -right-4 -bottom-10 font-black italic text-[12rem] uppercase pointer-events-none transition-all duration-700 group-hover:translate-x-10"
-              style={{ WebkitTextStroke: '1px rgba(255,255,255,0.03)', color: 'transparent' }}
+          {/* --- CARD 1: THE MAIN EXPEDITION (Journal/Home) --- */}
+          <Link href="/journal" className="md:col-span-2 md:row-span-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5 }}
+              className="h-full relative group overflow-hidden rounded-[2.5rem] border border-white/5 bg-brand-surface"
             >
-              GEAR
-            </span>
-
-            <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between w-full">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Shield className="text-crimson-red" size={20} />
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-crimson-red">Loadout_01</span>
-                </div>
-                <h4 className="text-4xl font-black uppercase italic tracking-tighter">Gear Guide</h4>
-                <p className="text-zinc-500 text-sm italic max-w-[200px]">Pro-level protection and tech protocols.</p>
+              <div className="absolute top-8 left-8 z-20 flex items-center gap-3">
+                <div className="h-1.5 w-1.5 rounded-full bg-brand-orange animate-pulse shadow-[0_0_8px_rgba(255,77,0,0.8)]" />
+                <span className="font-mono text-[10px] tracking-[0.4em] text-white/60 uppercase italic">Active_Log // 2026</span>
               </div>
+              <img
+                src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?q=80&w=1200"
+                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-[1.5s]"
+                alt="Ladakh"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
+              <div className="absolute bottom-0 p-10 z-20 w-full">
+                <h3 className="text-5xl md:text-6xl font-black italic uppercase leading-[0.85] tracking-tighter mb-4 text-white">
+                  Into the <br /> <span className="text-brand-orange">Unknown</span>
+                </h3>
+                <div className="flex items-center gap-4 text-zinc-400 group-hover:text-white transition-colors">
+                  <span className="text-xs font-bold uppercase tracking-widest italic">Ladakh Expedition</span>
+                  <div className="h-px w-8 bg-brand-orange/50" />
+                  <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-brand-orange" />
+                </div>
+              </div>
+            </motion.div>
+          </Link>
 
-              <motion.button
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="mt-6 md:mt-0 h-16 w-16 bg-white rounded-full flex items-center justify-center text-black"
-              >
-                <ArrowUpRight size={24} strokeWidth={3} />
-              </motion.button>
-            </div>
-          </motion.div>
+          {/* --- CARD 2: THE GARAGE --- */}
+          <Link href="/garage">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ borderColor: 'rgba(255, 77, 0, 0.3)' }}
+              className="h-full bg-brand-surface/30 backdrop-blur-xl p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
+            >
+              <Gauge className="absolute -right-4 -top-4 text-white/[0.02] rotate-12" size={180} />
+              <div className="h-14 w-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-brand-orange transition-all duration-500">
+                <Gauge className="text-white group-hover:text-black transition-colors" size={24} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase italic leading-none text-white">The Garage</h4>
+                <p className="text-zinc-500 text-xs mt-3 font-medium uppercase tracking-widest italic">Specs & Performance</p>
+              </div>
+            </motion.div>
+          </Link>
+
+          {/* --- CARD 3: JOIN THE CREW --- */}
+          <Link href="/crew">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ scale: 1.02 }}
+              className="h-full bg-brand-orange p-8 rounded-[2rem] text-black flex flex-col justify-between group cursor-pointer shadow-[0_20px_50px_rgba(255,77,0,0.2)]"
+            >
+              <div className="flex justify-between items-start">
+                <Users size={32} strokeWidth={2.5} />
+                <ArrowUpRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+              <div className="space-y-2">
+                <h4 className="text-3xl font-black uppercase italic leading-none tracking-tighter">Join The <br /> Crew</h4>
+              </div>
+            </motion.div>
+          </Link>
+
+          {/* --- CARD 4: GEAR GUIDE --- */}
+          <Link href="/gear" className="md:col-span-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="h-full bg-brand-surface/30 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/5 relative overflow-hidden group flex items-center cursor-pointer"
+            >
+              <span className="absolute -right-4 -bottom-10 font-black italic text-[12rem] uppercase pointer-events-none transition-all duration-700 group-hover:translate-x-10"
+                style={{ WebkitTextStroke: '1px rgba(255,255,255,0.03)', color: 'transparent' }}>
+                GEAR
+              </span>
+              <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between w-full">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-brand-orange">
+                    <Shield size={20} />
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em]">Loadout_01</span>
+                  </div>
+                  <h4 className="text-4xl font-black uppercase italic tracking-tighter text-white">Gear Guide</h4>
+                </div>
+                <div className="mt-6 md:mt-0 h-16 w-16 bg-white rounded-full flex items-center justify-center text-black group-hover:bg-brand-orange transition-colors">
+                  <ArrowUpRight size={24} strokeWidth={3} />
+                </div>
+              </div>
+            </motion.div>
+          </Link>
 
         </div>
       </section>
@@ -374,9 +356,9 @@ export default function Home() {
       </section>
 
       {/* ---------- CTA ---------- */}
-      <section className="py-32 px-6 relative overflow-hidden">
-        {/* Background Decorative Element */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-crimson-red/5 blur-[120px] rounded-full pointer-events-none" />
+      <section className="py-32 px-6 relative overflow-hidden bg-brand-black">
+        {/* Background Decorative Element - Updated to use Brand Orange with low opacity */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -384,10 +366,10 @@ export default function Home() {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto relative group"
         >
-          {/* The Main Container */}
-          <div className="relative overflow-hidden rounded-[3rem] bg-zinc-900/40 border border-white/5 backdrop-blur-3xl p-12 md:p-24 overflow-hidden">
+          {/* The Main Container - Uses brand-surface for card look */}
+          <div className="relative overflow-hidden rounded-[3rem] bg-brand-surface/40 border border-white/5 backdrop-blur-3xl p-12 md:p-24">
 
-            {/* Background Image Overlay (Subtle Bike Detail) */}
+            {/* Background Image Overlay */}
             <div className="absolute inset-0 opacity-10 grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 pointer-events-none">
               <img
                 src="https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=2000"
@@ -401,11 +383,11 @@ export default function Home() {
               {/* Left: Text Content */}
               <div className="md:col-span-7 text-left">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-2 w-2 rounded-full bg-crimson-red animate-pulse" />
-                  <span className="text-crimson-red font-mono text-[10px] font-black uppercase tracking-[0.4em]">Join the Inner Circle</span>
+                  <div className="h-2 w-2 rounded-full bg-brand-orange animate-pulse" />
+                  <span className="text-brand-orange font-mono text-[10px] font-black uppercase tracking-[0.4em]">Join the Inner Circle</span>
                 </div>
 
-                <h2 className="text-6xl md:text-8xl font-black italic uppercase leading-[0.8] tracking-tighter mb-8">
+                <h2 className="text-6xl md:text-8xl font-black italic uppercase leading-[0.8] tracking-tighter mb-8 text-white">
                   Refuel <br /> Your <span className="text-transparent" style={{ WebkitTextStroke: '1.5px white' }}>Soul.</span>
                 </h2>
 
@@ -418,15 +400,16 @@ export default function Home() {
               <div className="md:col-span-5 w-full">
                 <form className="space-y-4">
                   <div className="relative">
-                    <Mail className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-600 group-focus-within:text-crimson-red transition-colors" size={20} />
+                    <Mail className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-600 group-focus-within:text-brand-orange transition-colors" size={20} />
                     <input
                       type="email"
                       placeholder="ENTER YOUR ENGINE ID (EMAIL)"
-                      className="w-full bg-black/50 border border-white/5 rounded-2xl py-6 pl-16 pr-6 outline-none focus:border-crimson-red/50 transition-all font-mono text-xs uppercase tracking-widest placeholder:text-zinc-700"
+                      className="w-full bg-black/50 border border-white/5 rounded-2xl py-6 pl-16 pr-6 outline-none focus:border-brand-orange/50 transition-all font-mono text-xs uppercase tracking-widest placeholder:text-zinc-700 text-white"
                     />
                   </div>
 
-                  <button className="group w-full relative bg-crimson-red text-black font-black uppercase italic py-6 rounded-2xl overflow-hidden hover:scale-[1.02] active:scale-[0.98] transition-all">
+                  {/* Button updated to brand-orange */}
+                  <button className="group w-full relative bg-brand-orange text-black font-black uppercase italic py-6 rounded-2xl overflow-hidden hover:scale-[1.02] active:scale-[0.98] transition-all">
                     <span className="relative z-10 flex items-center justify-center gap-3 tracking-widest">
                       IGNITION START <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </span>
